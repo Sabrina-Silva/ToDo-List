@@ -14,6 +14,11 @@
     --danger:#E25858;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -26,4 +31,8 @@ body, input, textarea, button{
 }
 
 
-
+@media (max-width:800px){
+    body{
+        font-size: 93.5%;
+}
+}

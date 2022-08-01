@@ -1,0 +1,224 @@
+main{
+    width: 100%;
+}
+
+.AddTask{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    top: -2rem;
+}
+
+.AddTask input{
+    height: 4rem;
+    width: 40rem;
+
+    background: var(--gray500);
+    color: var(--gray300);
+    border: 1px solid var(--gray700);
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    outline: none;
+
+}
+
+.AddTask input:focus-within{
+    color: var(--gray100);
+    border: 1px solid var(--puple-dark);
+    
+}
+
+
+
+.AddTask button{
+    height: 4rem;
+    width: 6rem;
+
+    background: var(--blue-dark);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--gray100);
+    text-align: center;
+    margin-left: 0.5rem;
+}
+
+.AddTask button:hover{
+    background: var(--blue);
+    transition: 0.5s;
+}
+
+.AddTask button img{
+    padding-left: 0.5rem;
+    position: relative;
+    top:0.2rem;
+}
+
+.informationTask{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0 ;
+}
+
+.information{
+    width: 48rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.taskCreated b{
+    color: var(--blue);
+    margin-right: 0.5rem;
+}
+
+.taskConcluded b{
+    color: var(--puple-dark);
+    margin-right: 0.5rem;
+}
+
+.taskConcluded span{
+    color: var(--gray100);
+    background: var(--gray400);
+    padding: 0 0.5rem;
+    border-radius: 20px;
+}
+
+.taskCreated span{
+    color: var(--gray100);
+    background: var(--gray400);
+    padding: 0 0.5rem;
+    border-radius: 20px;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+.ifTaskNull{
+    text-align: center;
+    padding-top: 4rem;
+    color: var(--gray300);
+}
+
+.phaseBold{
+    font-weight: 700;
+
+}
+
+ul{
+    list-style: none;
+    width: 48rem;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--gray500);
+    border-radius: 10px;
+    border: 1px solid var(--gray400);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+li div{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+}
+
+li p{
+    color: var(--gray100);
+    line-height: 140%;
+    padding: 0 1rem 0 0.5rem;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: var(--gray100);
+    opacity: 0.6;
+}
+
+.checked{
+    display: block;
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 18px;
+    cursor: pointer;
+}
+
+.checked input{
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.checked input:checked ~ .checkmark{
+    background-color: var(--puple-dark);
+    border: 2px solid var(--puple-dark);
+
+}
+
+.checked input:checked ~ .checkmark:hover{
+    background-color: var(--puple);
+    border: 2px solid var(--puple);
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.checkmark:hover{
+    background-color: var(--blue-dark);
+}
+
+.checkmark:after {
+    content: "";
+    position:absolute ;
+    display: none;
+    left: 6px;
+    top: 3px;
+    width: 3px;
+    height: 6px;
+    border: solid var(--gray100);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+.checked input:checked ~ .checkmark:after{
+    display: block;
+}
+
+
+.btnDelet{
+    border-radius: 2px;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    transition: 0.2s;
+    }
+
+.btnDelet:hover{
+    background: var(--gray400);
+}
